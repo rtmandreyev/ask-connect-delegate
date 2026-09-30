@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-d405468d7b2f249ce259daf242839710.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-69ae5136c95879a1d5bd3f0273019103.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -133,13 +133,221 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="working-title"> ASK<br> CONNECT<br> DELEGATE </span></p></h1>
+  <p class="subtitle">ARCHITECTURE FOR AI WORK</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
-
+<section id="section" class="slide level2 permission">
+<h2></h2>
+<div class="slide s1">
+  <div class="sys-label">SYS_01 / PERMISSION</div>
+  <div class="s1-number">93%</div>
+  <div class="s1-copy">of Claude Code<br>permission prompts<br>were approved.</div>
+  <div class="s1-context">ANTHROPIC-REPORTED PRODUCT TELEMETRY</div>
+  <div class="s1-question fragment">IS THIS OVERSIGHT?</div>
+  <div class="s1-note fragment">Repeated prompts can produce approval fatigue, not meaningful review.</div>
+  <div class="source"><span>SOURCE</span> [1] Anthropic Engineering (2026), “How we contain Claude across products.”</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 scenario">
+<h2></h2>
+<div class="slide s2">
+  <div class="sys-label">SYS_02 / OPERATIONS</div>
+  <div class="s2-kicker">AUTOMATE THIS.</div>
+  <div class="s2-count">200 CAMPAIGNS.</div>
+  <div class="s2-cadence">EVERY WEEK.</div>
+  <div class="s2-process">
+    <div class="process-item"><span>01</span>ANALYZE PERFORMANCE</div>
+    <div class="process-item fragment"><span>02</span>INVESTIGATE ANOMALIES</div>
+    <div class="process-item fragment"><span>03</span>RECOMMEND ACTIONS</div>
+    <div class="process-item fragment"><span>04</span>EXECUTE APPROVED CHANGES</div>
+  </div>
+  <div class="s2-how fragment">HOW?</div>
+  <div class="disclaimer">ILLUSTRATIVE BUSINESS SCENARIO — NOT AN EMPIRICAL RESULT</div>
+</div>
+</section>
+<section id="section-2" class="slide level2 dimensions">
+<h2></h2>
+<div class="slide s3">
+  <div class="sys-label">SYS_03 / ARCHITECTURE</div>
+  <div class="s3-title">ONE REQUEST.<br>DIFFERENT QUESTIONS.</div>
+  <div class="dimension d-ask fragment"><div class="dimension-word">ASK</div><div class="dimension-question">What cognition or judgment do we need?</div></div>
+  <div class="dimension d-connect fragment"><div class="dimension-word">CONNECT</div><div class="dimension-question">What information, systems, and tools can it reach?</div></div>
+  <div class="dimension d-delegate fragment"><div class="dimension-word">DELEGATE</div><div class="dimension-question">Who controls the next step?</div></div>
+  <div class="s3-not-ladder fragment">DIMENSIONS — NOT STAGES</div>
+  <div class="s3-book fragment"><i>Prediction Machines</i> decomposes prediction, judgment, action, outcomes, inputs, training, and feedback. Agentic systems add a new architecture question: <strong>who decomposes the work?</strong></div>
+  <div class="source"><span>CONNECTION</span> [2] Agrawal, Gans &amp; Goldfarb (2018); extension is our synthesis.</div>
+</div>
+</section>
+<section id="section-3" class="slide level2 workflow-agent">
+<h2></h2>
+<div class="slide s4">
+  <div class="sys-label">SYS_04 / CONTROL FLOW</div>
+  <div class="s4-title">WORKFLOW <span>≠</span> AGENT</div>
+  <div class="control-panel workflow-panel">
+    <div class="panel-label">PREDEFINED SEQUENCE</div>
+    <div class="workflow-flow"><div>TRIGGER</div><b>↓</b><div>DATA</div><b>↓</b><div>AI</div><b>↓</b><div>RULE</div><b>↓</b><div>ACTION</div></div>
+    <div class="panel-thesis">THE PROCESS<br>CONTAINS AI</div>
+  </div>
+  <div class="control-panel agent-panel fragment">
+    <div class="panel-label">DYNAMIC CONTROL</div>
+    <div class="agent-goal">GOAL</div>
+    <div class="agent-loop"><div>OBSERVE</div><b>↓</b><div>DECIDE</div><b>↓</b><div>ACT</div><b>↺</b></div>
+    <div class="panel-thesis">THE AI<br>CONTAINS A PROCESS</div>
+  </div>
+  <div class="s4-caution fragment">A USEFUL TAXONOMY — NOT A UNIVERSAL DEFINITION.</div>
+  <div class="source"><span>TECHNICAL BASIS</span> [3] Anthropic (2024), “Building effective agents.” Containment phrases are our synthesis.</div>
+</div>
+</section>
+<section id="section-4" class="slide level2 connect-delegate">
+<h2></h2>
+<div class="slide s5">
+  <div class="sys-label">SYS_05 / CONNECTIVITY</div>
+  <div class="s5-title">CONNECT <span>≠</span> DELEGATE</div>
+  <div class="mcp-map">
+    <div class="tool-node n-crm">CRM</div><div class="tool-node n-db">DATABASE</div><div class="tool-node n-email">EMAIL</div><div class="tool-node n-files">FILES</div><div class="tool-node n-tools">BUSINESS TOOLS</div><div class="ai-node">AI</div>
+    <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div><div class="connector c5"></div>
+  </div>
+  <div class="s5-statement fragment">ACCESS IS NOT AUTONOMY.</div>
+  <div class="s5-explain fragment">
+    <div><span>MCP STANDARDIZES</span> interaction with external context and capabilities.</div>
+    <div><span>MCP DOES NOT SUPPLY</span> a planner, autonomous goals, an execution loop, or business authority.</div>
+    <div><span>IMPLEMENTATIONS STILL OWN</span> consent, authorization, access control, and containment.</div>
+  </div>
+  <div class="source"><span>SOURCE</span> [4] Model Context Protocol Specification 2026-07-28, Architecture and Tools.</div>
+</div>
+</section>
+<section id="section-5" class="slide level2 close-loop">
+<h2></h2>
+<div class="slide s6">
+  <div class="sys-label">SYS_06 / CLOSED LOOP</div>
+  <div class="s6-title">THE LOOP CAN CLOSE.</div>
+  <div class="s6-primary"><div class="s6-number">55%</div><div class="s6-label">OF CLAIMS AUTOMATED<br>START → FINISH</div></div>
+  <div class="s6-secondary fragment"><div class="s6-small-number">96%</div><div class="s6-small-copy">of first notices of loss<br>without human intervention</div></div>
+  <div class="s6-boundary fragment"><div class="boundary-number">≈45%</div><div class="boundary-copy">outside end-to-end automation</div><div class="boundary-line"></div><div class="boundary-detail">Unauthorized or concerning claims move to human claims experts.</div></div>
+  <div class="s6-conclusion fragment">AUTOMATION DIDN’T REMOVE THE HUMAN.<br><strong>IT MOVED THE BOUNDARY.</strong></div>
+  <div class="source"><span>COMPANY-REPORTED METRICS</span> [5] Lemonade FY2025 Form 10-K, filed Feb. 25, 2026.</div>
+</div>
+</section>
+<section id="section-6" class="slide level2 human-ai">
+<h2></h2>
+<div class="slide s7">
+  <div class="sys-label">SYS_07 / COLLABORATION</div>
+  <div class="s7-title">HUMAN + AI <span>≠</span> BEST</div>
+  <div class="s7-counts"><div class="study-count"><strong>106</strong><span>EXPERIMENTS</span></div><div class="study-count"><strong>370</strong><span>EFFECT SIZES</span></div><div class="study-count small"><strong>74</strong><span>PAPERS</span></div></div>
+  <div class="s7-result fragment">HUMAN + AI did <strong>not</strong> outperform<br>the better of human or AI alone<br><em>on average.</em></div>
+  <div class="s7-effect fragment"><span>STRONG SYNERGY</span><strong>Hedges’ g = −0.23</strong><small>95% CI [−0.39, −0.07]</small></div>
+  <div class="s7-nuance fragment">But combinations <strong>did outperform humans alone</strong> on average: g = 0.64.</div>
+  <div class="source"><span>SOURCE</span> [6] Vaccaro, Almaatouq &amp; Malone, <i>Nature Human Behaviour</i> 8 (2024).</div>
+</div>
+</section>
+<section id="section-7" class="slide level2 human-boundary">
+<h2></h2>
+<div class="slide s8">
+  <div class="sys-label">SYS_08 / HUMAN BOUNDARY</div>
+  <div class="s8-title">DON’T REMOVE THE HUMAN.<br><span>MOVE THEM.</span></div>
+  <div class="human-roles"><div>APPROVER</div><div>EXCEPTION<br>HANDLER</div><div>SUPERVISOR</div><div class="active-role">TAKEOVER</div></div>
+  <div class="takeover-flow fragment">
+    <div class="flow-step agent-step">AGENT WORKS</div><div class="flow-arrow">→</div><div class="flow-step gate-step">LOGIN / 2FA / CAPTCHA / PAYMENT</div><div class="flow-arrow">→</div><div class="flow-step human-step">HUMAN TAKES CONTROL</div><div class="flow-arrow">→</div><div class="flow-step">HAND BACK</div><div class="flow-arrow">→</div><div class="flow-step agent-step">AGENT RESUMES</div>
+  </div>
+  <div class="s8-fence fragment"><span>[CONTROL TRANSFER]</span> Browser and computer-use tools are refused while the human holds the lease.</div>
+  <div class="s8-caution fragment">TOOL-LEVEL FENCE — NOT AN OS-LEVEL SECURITY BOUNDARY.</div>
+  <div class="source"><span>SOURCE</span> [7] Nous Research, Hermes Agent documentation: “Bot Screen.”</div>
+</div>
+</section>
+<section id="section-8" class="slide level2 authorize">
+<h2></h2>
+<div class="slide s9">
+  <div class="s9-topline"><span>ASK</span><span>CONNECT</span><span>DELEGATE</span></div>
+  <div class="s9-authorize fragment">AUTHORIZE_</div>
+  <div class="s9-question fragment">WHAT MAY IT DO<br>WITHOUT ASKING US?</div>
+  <div class="authority-compare fragment">
+    <div class="authority-item"><div class="authority-label">SAME CAPABILITY</div><div>DRAFT AN EMAIL</div></div><div class="authority-divider">≠</div><div class="authority-item high-authority"><div class="authority-label">DIFFERENT AUTHORITY</div><div>SEND MONEY</div></div>
+  </div>
+  <div class="s9-bottom fragment">The difference may not be intelligence.<br>It may be <strong>authority, reversibility, and blast radius.</strong></div>
+  <div class="source source-dark"><span>SYNTHESIS</span> [1][5] Containment and escalation · [7][10] takeover and approval mechanisms.</div>
+</div>
+</section>
+<section id="section-9" class="slide level2 architecture-stack">
+<h2></h2>
+<div class="slide s10">
+  <div class="sys-label">SYS_10 / COMPOSITION</div>
+  <div class="s10-title">THE ARCHITECTURE IS A STACK.</div>
+  <div class="s10-subtitle">LAYERS — NOT MATURITY LEVELS</div>
+  <div class="arch-stack">
+    <div class="stack-layer"><div class="stack-name">PAPERCLIP</div><div class="stack-role">CONTROL / ORCHESTRATION / GOVERNANCE</div><div class="stack-note">Agents wake for heartbeat runs; adapters connect the control plane to the runtime.</div></div>
+    <div class="stack-layer"><div class="stack-name">BUZZ</div><div class="stack-role">SHARED HUMAN + AGENT WORKSPACE</div><div class="stack-note">The “pipe,” not the brain. Approval-gate persistence/resume is still incomplete.</div></div>
+    <div class="stack-layer"><div class="stack-name">HERMES</div><div class="stack-role">AGENT RUNTIME / AUTONOMOUS WORKER</div><div class="stack-note">Executes work; Paperclip can orchestrate it through built-in Hermes adapters.</div></div>
+    <div class="stack-layer"><div class="stack-name">n8n / MCP / APIs</div><div class="stack-role">WORKFLOW + CONNECTIVITY LAYER</div><div class="stack-note">Deterministic workflows, agent tools, selected approvals, and external capabilities compose.</div></div>
+    <div class="stack-layer"><div class="stack-name">DATA / BUSINESS SYSTEMS</div><div class="stack-role">SYSTEMS OF RECORD + ACTION</div><div class="stack-note">The operational surface where outcomes and side effects occur.</div></div>
+  </div>
+  <div class="jev-gate fragment"><div class="gate-top">BOUNDED DECISION COMPONENT</div><div class="gate-name">JEV</div><div class="gate-copy">A typed judgment can sit beside the stack as a gate — not another rung.</div></div>
+  <div class="source stack-source"><span>SOURCES</span> [7] Hermes · [8] Paperclip · [9] Buzz · [10] n8n / MCP documentation.</div>
+</div>
+</section>
+<section id="section-10" class="slide level2 bounded">
+<h2></h2>
+<div class="slide s11">
+  <div class="sys-label">SYS_11 / BOUNDED JUDGMENT</div>
+  <div class="s11-title">MORE AUTONOMY ISN’T<br>ALWAYS THE ANSWER.</div>
+  <div class="jev-flow">
+    <div class="jev-input"><span>INPUT</span><strong>STATE</strong><strong>+ TYPED QUESTIONS</strong></div><div class="jev-arrow">→</div><div class="jev-core">JEV</div><div class="jev-arrow">→</div>
+    <div class="jev-output"><div><span>PILOT</span><strong>.61</strong></div><div><span>DEPLOY</span><strong>.22</strong></div><div><span>ABSTAIN</span><strong>.17</strong></div><small>ILLUSTRATIVE CHOICE DISTRIBUTION</small></div>
+  </div>
+  <div class="primitive-grid fragment"><div><strong>CHOICE</strong><span>option + probabilities + confidence</span></div><div><strong>SCORE</strong><span>level position + probabilities + confidence</span></div><div><strong>NOUL</strong><span>P(yes), from 0 to 1</span></div></div>
+  <div class="confidence-note fragment"><strong>CONFIDENCE ≠ ANOTHER PROBABILITY.</strong> It summarizes how concentrated the Choice or Score distribution is. Calibration is evaluated across groups, not guaranteed for one answer.</div>
+  <div class="s11-takeaway fragment">SOMETIMES THE BETTER AI SYSTEM<br><strong>HAS FEWER POSSIBLE ANSWERS.</strong></div>
+  <div class="s11-caution fragment">Typed outputs constrain interface shape. They do not guarantee correctness, calibration in your domain, or adversarial robustness.</div>
+  <div class="source"><span>SOURCES</span> [11][12][13] System One, Choice, Score · [14][15][16] Noul, Confidence, Jev documentation.</div>
+</div>
+</section>
+<section id="section-11" class="slide level2 final-framework">
+<h2></h2>
+<div class="slide s12">
+  <div class="sys-label">SYS_12 / DECISION FRAME</div>
+  <div class="s12-title">CLOSE THE LOOP.</div>
+  <div class="question-grid">
+    <div class="question-card fragment"><span>01</span><strong>CAN WE VERIFY IT?</strong><p>Is there an independent test or machine-verifiable outcome?</p></div>
+    <div class="question-card fragment"><span>02</span><strong>CAN WE REVERSE IT?</strong><p>What happens when the action is wrong?</p></div>
+    <div class="question-card fragment"><span>03</span><strong>CAN WE BOUND IT?</strong><p>What can it reach, and what is the blast radius?</p></div>
+    <div class="question-card fragment"><span>04</span><strong>WHO HANDLES THE EXCEPTION?</strong><p>What happens outside the automated envelope?</p></div>
+  </div>
+  <div class="s12-reframe fragment"><div class="old-question">HOW MUCH AI SHOULD WE USE?</div><div class="reframe-arrow">↓</div><div class="new-question">WHAT CAN WE SAFELY DELEGATE?</div></div>
+  <div class="s12-principle fragment">DELEGATE WHERE THE LOOP CAN CLOSE.<br><strong>CONSTRAIN AUTHORITY WHERE IT CAN’T.</strong></div>
+  <div class="source"><span>SYNTHESIS</span> Framework developed from the evidence and product architectures presented; not a published academic framework.</div>
+</div>
+</section>
+<section id="section-12" class="slide level2 references">
+<h2></h2>
+<div class="slide s13">
+  <div class="sys-label">SYS_REF / SOURCES</div>
+  <div class="s13-title">REFERENCES</div>
+  <div class="references-grid">
+    <div class="reference-column">
+      <div class="ref"><b>[1]</b> McGuinness, M., Grace, M., De Jonghe, J., Eaton, J., &amp; Ribbink, A. (2026, May 25). “How we contain Claude across products.” <i>Anthropic Engineering</i>.</div>
+      <div class="ref"><b>[2]</b> Agrawal, A., Gans, J., &amp; Goldfarb, A. (2018). <i>Prediction Machines: The Simple Economics of Artificial Intelligence</i>. Harvard Business Review Press.</div>
+      <div class="ref"><b>[3]</b> Erik S. &amp; Zhang, B. (2024, Dec. 19). “Building effective agents.” <i>Anthropic Engineering</i>.</div>
+      <div class="ref"><b>[4]</b> Model Context Protocol. (2026). <i>Specification 2026-07-28</i>: Architecture; Server / Tools.</div>
+      <div class="ref"><b>[5]</b> Lemonade, Inc. (2026). <i>FY2025 Annual Report on Form 10-K</i>. Filed Feb. 25, 2026. SEC accession 0001691421-26-000016.</div>
+      <div class="ref"><b>[6]</b> Vaccaro, M., Almaatouq, A., &amp; Malone, T. (2024). “When combinations of humans and AI are useful.” <i>Nature Human Behaviour, 8</i>, 2293–2303. doi:10.1038/s41562-024-02024-1.</div>
+      <div class="ref"><b>[7]</b> Nous Research. (2026). “Bot Screen.” <i>Hermes Agent Documentation</i>. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[8]</b> Paperclip. (2026). <i>Agents; Agent Adapters; Approvals API; Hermes Adapter; Hermes Gateway Adapter</i>. Official documentation. Accessed Sept. 30, 2026.</div>
+    </div>
+    <div class="reference-column">
+      <div class="ref"><b>[9]</b> Block. (2026). <i>Buzz README; VISION.md; workflow executor source</i>. github.com/block/buzz, current main. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[10]</b> n8n. (2026). <i>AI Agent; Call n8n Workflow Tool; Human-in-the-loop for tools; MCP Client Tool</i>. Official documentation. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[11]</b> TypeSafe AI. (2026). “System One.” Official documentation. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[12]</b> TypeSafe AI. (2026). “Choice.” Official documentation. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[13]</b> TypeSafe AI. (2026). “Score.” Official documentation. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[14]</b> TypeSafe AI. (2026). “Noul.” Official documentation. Accessed Sept. 30, 2026.</div>
+      <div class="ref"><b>[15]</b> TypeSafe AI. (2026). <i>Confidence; How to build with TypeSafe; Jev 1.13 jaggedness</i>. Official documentation.</div>
+      <div class="ref"><b>[16]</b> Almeida, D. (2026, Sept. 15). “Introducing System One Models &amp; Jev.” <i>TypeSafe AI Blog</i>.</div>
+    </div>
+  </div>
+  <div class="s13-note">Inline citations identify the source supporting each substantive slide. Product capability claims are attributed to first-party documentation; empirical performance claims use SEC or academic sources.</div>
+</div>
 
 </section>
     </div>
