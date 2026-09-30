@@ -1,0 +1,60 @@
+/*-- scss:defaults --*/
+
+$body-bg: #111312;
+$body-color: #f2f4f1;
+$font-family-sans-serif:
+  "Avenir Next",
+  Avenir,
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  sans-serif;
+
+/*-- scss:rules --*/
+
+/* Provisional scaffold only. The final design system will be defined later. */
+:root {
+  --surface: #111312;
+  --text: #f2f4f1;
+  --muted: #a9aeaa;
+  --accent: #b6ff3b;
+}
+
+.reveal {
+  background: var(--surface);
+  color: var(--text);
+}
+
+#title-slide {
+  padding: 130px 150px !important;
+  text-align: left;
+}
+
+#title-slide .title {
+  margin: 0;
+  line-height: 0.94;
+}
+
+.working-title {
+  display: inline-block;
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+  font-size: 92px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: var(--text);
+}
+
+#title-slide::after {
+  content: "";
+  position: absolute;
+  left: 154px;
+  top: 585px;
+  width: 110px;
+  height: 5px;
+  background: var(--accent);
+}

@@ -1,0 +1,21 @@
+---
+title: |
+  <span class="working-title">
+    ASK<br>
+    CONNECT<br>
+    DELEGATE
+  </span>
+format:
+  revealjs:
+    theme: theme.scss
+    transition: none
+    background-transition: none
+    slide-number: false
+    controls: false
+    progress: false
+    center: false
+    hash: true
+    width: 1600
+    height: 900
+    margin: 0
+---
