@@ -190,6 +190,8 @@ $black:    #05090A;   /* ink on acid */
 .buzz-sub { position:absolute; left:116px; top:309px; font-size:18px; color:rgba(54,221,245,.62); }
 .node { position:absolute; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; padding:0 22px; border:1px solid; }
 .node-name { font:750 25px "SFMono-Regular",Menlo,Monaco,Consolas,monospace; letter-spacing:1.2px; }
+.node-mark { width:21px; height:21px; margin-right:11px; vertical-align:-3px; }
+.buzz-mark { width:26px; height:17px; margin-right:11px; vertical-align:-2px; }
 .node-role { margin-top:7px; font-size:19px; line-height:1.15; }
 .n-paperclip { left:140px; top:352px; width:300px; height:80px; border-color:rgba(255,228,90,.45); background:rgba(255,228,90,.045); }
 .n-paperclip .node-name { color:$yellow; } .n-paperclip .node-role { color:rgba(255,228,90,.72); }

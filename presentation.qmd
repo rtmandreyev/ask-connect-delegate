@@ -231,9 +231,9 @@ format:
     </g>
   </svg>
   <div class="buzz-field fragment" data-fragment-index="0"></div>
-  <div class="buzz-tag fragment" data-fragment-index="0">BUZZ <em>· SHARED WORKSPACE</em></div>
+  <div class="buzz-tag fragment" data-fragment-index="0"><img class="buzz-mark" src="assets/logos/buzz-mark.svg" alt="">BUZZ <em>· SHARED WORKSPACE</em></div>
   <div class="buzz-sub fragment" data-fragment-index="0">humans and agents working in the same surface</div>
-  <div class="node n-paperclip fragment" data-fragment-index="1"><div class="node-name">PAPERCLIP</div><div class="node-role">orchestration · governance</div></div>
+  <div class="node n-paperclip fragment" data-fragment-index="1"><div class="node-name"><img class="node-mark" src="assets/logos/paperclip-icon.svg" alt="">PAPERCLIP</div><div class="node-role">orchestration · governance</div></div>
   <div class="node n-hermes fragment" data-fragment-index="2"><div class="node-name">HERMES</div><div class="node-role">agent · worker</div></div>
   <div class="node n-mcp fragment" data-fragment-index="3"><div class="node-name">MCP</div><div class="node-role">tools · context</div></div>
   <div class="node n-n8n fragment" data-fragment-index="3"><div class="node-name">n8n</div><div class="node-role">workflows</div></div>
