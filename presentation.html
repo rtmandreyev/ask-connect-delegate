@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-b50e1b065b813bda6c87e899b1be486c.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-5148be8d5545b41b0cdbfb1197c4e6c2.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -261,7 +261,7 @@
     <div class="flow-step fragment" data-fragment-index="2">HAND<br>BACK</div><div class="flow-arrow fragment" data-fragment-index="3">→</div>
     <div class="flow-step agent-step fragment" data-fragment-index="3">AGENT<br>RESUMES</div>
   </div>
-  <div class="s8-example fragment">You can let AI work — and take over only when a step needs you.<br><span>Hermes is one current example.</span></div>
+  <div class="s8-example fragment">You can let AI work — and take over only when a step needs you.<span class="s8-credit"><img class="logo logo-nous" src="assets/logos/nous-research.svg" alt="Nous Research mark">Hermes is one current example — Nous Research.</span></div>
   <div class="s8-note fragment">Hermes blocks the agent’s browser and computer tools while you have control.</div>
   <div class="source"><span>SOURCE</span> [7] Nous Research, Hermes Agent documentation: “Bot Screen.”</div>
 </div>
@@ -269,6 +269,7 @@
 <section id="section-8" class="slide level2 authorize">
 <h2></h2>
 <div class="slide s9">
+  <div class="sys-label">SYS_09 / AUTHORITY</div>
   <div class="s9-topline"><span>ASK</span><span>CONNECT</span><span>DELEGATE</span></div>
   <div class="s9-authorize fragment">AUTHORIZE_</div>
   <div class="s9-question fragment">WHAT MAY IT DO<br>WITHOUT ASKING US?</div>
@@ -283,20 +284,44 @@
 <h2></h2>
 <div class="slide s10">
   <div class="sys-label">SYS_10 / COMPOSITION</div>
-  <div class="s10-title">The architecture<br>is a stack.</div>
-  <div class="arch-stack">
-    <div class="stack-layer governance fragment" data-fragment-index="0"><div class="stack-name">PAPERCLIP</div><div class="stack-role">control · governance</div></div>
-    <div class="stack-arrow fragment" data-fragment-index="1">↓</div>
-    <div class="stack-layer workspace fragment" data-fragment-index="1"><div class="stack-name">BUZZ</div><div class="stack-role">shared workspace</div></div>
-    <div class="stack-arrow fragment" data-fragment-index="2">↓</div>
-    <div class="stack-layer execution fragment" data-fragment-index="2"><div class="stack-name">HERMES</div><div class="stack-role">worker · runtime</div></div>
-    <div class="stack-arrow fragment" data-fragment-index="3">↓</div>
-    <div class="stack-layer connection fragment" data-fragment-index="3"><div class="stack-name">n8n · MCP · APIs</div><div class="stack-role">workflow · connection</div></div>
-    <div class="stack-arrow fragment" data-fragment-index="4">↓</div>
-    <div class="stack-layer systems fragment" data-fragment-index="4"><div class="stack-name">BUSINESS SYSTEMS</div></div>
-  </div>
-  <div class="jev-gate fragment" data-fragment-index="5"><div class="gate-name">JEV</div><div class="gate-role">BOUNDED DECISION</div></div>
-  <div class="s10-caveat fragment" data-fragment-index="6">ONE POSSIBLE STACK.</div>
+  <div class="s10-title">BUILD THE SYSTEM.<br>NOT JUST THE MODEL.</div>
+  <svg class="sys-lines" width="1600" height="900" viewbox="0 0 1600 900" aria-hidden="true">
+    <g class="fragment" data-fragment-index="2">
+      <line x1="290" y1="432" x2="290" y2="470"></line>
+      <polygon points="284,468 296,468 290,480"></polygon>
+    </g>
+    <g class="fragment" data-fragment-index="3">
+      <line x1="440" y1="522" x2="660" y2="522"></line>
+      <line x1="660" y1="386" x2="660" y2="586"></line>
+      <line x1="660" y1="386" x2="700" y2="386"></line>
+      <line x1="660" y1="486" x2="700" y2="486"></line>
+      <line x1="660" y1="586" x2="700" y2="586"></line>
+      <line x1="950" y1="386" x2="1055" y2="386"></line>
+      <line x1="950" y1="486" x2="1055" y2="486"></line>
+      <line x1="950" y1="586" x2="1055" y2="586"></line>
+      <line x1="1055" y1="386" x2="1055" y2="586"></line>
+      <line x1="1055" y1="486" x2="1093" y2="486"></line>
+      <polygon points="1091,480 1091,492 1103,486"></polygon>
+    </g>
+    <g class="fragment" data-fragment-index="4">
+      <line x1="290" y1="562" x2="290" y2="656"></line>
+      <line x1="290" y1="656" x2="412" y2="656"></line>
+      <polygon points="412,650 412,662 424,656"></polygon>
+      <line x1="694" y1="656" x2="1055" y2="656"></line>
+      <line x1="1055" y1="586" x2="1055" y2="656"></line>
+    </g>
+  </svg>
+  <div class="buzz-field fragment" data-fragment-index="0"></div>
+  <div class="buzz-tag fragment" data-fragment-index="0">BUZZ <em>· SHARED WORKSPACE</em></div>
+  <div class="buzz-sub fragment" data-fragment-index="0">humans and agents working in the same surface</div>
+  <div class="node n-paperclip fragment" data-fragment-index="1"><div class="node-name">PAPERCLIP</div><div class="node-role">orchestration · governance</div></div>
+  <div class="node n-hermes fragment" data-fragment-index="2"><div class="node-name">HERMES</div><div class="node-role">agent · worker</div></div>
+  <div class="node n-mcp fragment" data-fragment-index="3"><div class="node-name">MCP</div><div class="node-role">tools · context</div></div>
+  <div class="node n-n8n fragment" data-fragment-index="3"><div class="node-name">n8n</div><div class="node-role">workflows</div></div>
+  <div class="node n-apis fragment" data-fragment-index="3"><div class="node-name">APIs</div><div class="node-role">direct interfaces</div></div>
+  <div class="node n-systems fragment" data-fragment-index="3"><div class="node-name">BUSINESS SYSTEMS</div><div class="node-role">where operational actions and data live</div></div>
+  <div class="s10-caveat fragment" data-fragment-index="3">ONE POSSIBLE COMPOSITION.</div>
+  <div class="node n-jev fragment" data-fragment-index="4"><div class="node-name">JEV</div><div class="node-role">optional decision gate</div></div>
   <div class="source"><span>SOURCES</span> [7] Hermes · [8] Paperclip · [9] Buzz · [10] n8n / MCP documentation.</div>
 </div>
 </section>
@@ -309,53 +334,80 @@
     <div class="jev-input fragment">UNSTRUCTURED<br>STATE</div><div class="jev-arrow fragment">↓</div><div class="jev-core fragment">JEV</div><div class="jev-arrow fragment">↓</div>
     <div class="jev-output fragment"><div><span>PILOT</span><strong>.61</strong></div><div><span>DEPLOY</span><strong>.22</strong></div><div><span>ABSTAIN</span><strong>.17</strong></div><small>ILLUSTRATIVE JEV CHOICE OUTPUT</small></div>
   </div>
-  <div class="s11-typed fragment">TYPED PROBABILITIES<br><strong>NOT PROSE</strong></div>
+  <div class="s11-typed fragment">TYPED<br><strong>DECISIONS</strong></div>
   <div class="confidence-note fragment">Confidence measures how concentrated the Choice / Score distribution is.</div>
   <div class="source"><span>SOURCES</span> [11] System One · [12][13][14] Choice, Score, Noul · [15][16] Confidence and Jev.</div>
 </div>
 </section>
-<section id="section-11" class="slide level2 model-toolbox">
+<section id="section-11" class="slide level2 openrouter">
 <h2></h2>
 <div class="slide s12">
-  <div class="sys-label">SYS_12 / MODEL TOOLBOX</div>
-  <div class="s12-prompt">BEST MODEL?</div>
-  <div class="s12-answer fragment" data-fragment-index="0">BEST FOR WHAT?</div>
-  <div class="toolbox-grid">
-    <div class="toolbox-item t-frontier fragment" data-fragment-index="1"><div class="toolbox-name">FRONTIER GENERALIST</div><div class="toolbox-role">BROAD REASONING<br>HARD OPEN-ENDED WORK</div><div class="toolbox-examples">GPT · CLAUDE · GEMINI · DEEPSEEK</div></div>
-    <div class="toolbox-item t-jev fragment" data-fragment-index="2"><div class="toolbox-name">JEV</div><div class="toolbox-role">DECISIONS</div></div>
-    <div class="toolbox-item t-inkling fragment" data-fragment-index="3"><div class="toolbox-name">INKLING + TINKER</div><div class="toolbox-role">GENERALIST → YOUR SPECIALIST</div></div>
-    <div class="toolbox-item t-echo fragment" data-fragment-index="4"><div class="toolbox-name">ECHO</div><div class="toolbox-role">WRITING / STYLE</div></div>
+  <div class="sys-label">SYS_12 / DISCOVERY</div>
+  <div class="s12-kicker">OPENROUTER / EXPERIMENT</div>
+  <div class="s12-title">TRY IT<br>BEFORE YOU KNOW<br>ITS NAME.</div>
+  <svg class="s12-lines" width="1600" height="900" viewbox="0 0 1600 900" aria-hidden="true">
+    <g class="fragment" data-fragment-index="1">
+      <line x1="201" y1="412" x2="201" y2="444"></line>
+      <polygon points="195,442 207,442 201,454"></polygon>
+    </g>
+    <g class="fragment" data-fragment-index="2">
+      <line x1="201" y1="528" x2="201" y2="556"></line>
+      <line x1="172" y1="556" x2="604" y2="556"></line>
+      <line x1="172" y1="556" x2="172" y2="576"></line>
+      <line x1="388" y1="556" x2="388" y2="576"></line>
+      <line x1="604" y1="556" x2="604" y2="576"></line>
+    </g>
+  </svg>
+  <div class="s12-node n12-hermes fragment" data-fragment-index="0"><div class="node-name">HERMES</div><div class="node-role">agent harness</div></div>
+  <div class="s12-node n12-openrouter fragment" data-fragment-index="1"><div class="node-name">OPENROUTER</div><div class="node-role">model API</div></div>
+  <img class="logo logo-or s12-orlogo fragment" data-fragment-index="1" src="assets/logos/openrouter.svg" alt="OpenRouter">
+  <div class="model-chip chip-inkling fragment" data-fragment-index="2"><div class="chip-name">INKLING</div><div class="chip-price">$0</div></div>
+  <div class="model-chip chip-nemotron fragment" data-fragment-index="2"><div class="chip-name">NEMOTRON</div><div class="chip-price">$0</div></div>
+  <div class="model-chip chip-bunny fragment" data-fragment-index="2"><div class="chip-name">SPACE BUNNY α</div><div class="chip-price">$0 · STEALTH</div></div>
+  <div class="s12-trynow fragment" data-fragment-index="2">TRY NOW FOR $0</div>
+  <div class="s12-map">
+    <div class="stealth-row fragment" data-fragment-index="3"><span>QUASAR α / OPTIMUS α</span><b>→</b><strong>GPT-4.1</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="4"><span>POLARIS α</span><b>→</b><strong>EARLY GPT-5.1 SNAPSHOT</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="5"><span>OX α</span><b>→</b><strong>GLM-5.3 FLASH</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="6"><span>UNION α</span><b>→</b><strong>UNBIASED PARETO</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="7"><span>HUNTER α</span><b>→</b><strong>XIAOMI MiMo-V2-PRO</strong></div>
+    <div class="stealth-row unknown fragment" data-fragment-index="8"><span>SPACE BUNNY α</span><b>→</b><strong>?</strong></div>
   </div>
-  <div class="s12-thesis fragment" data-fragment-index="5">THE MODEL ECOSYSTEM<br>IS A <strong>TOOLBOX.</strong><br><em>NOT A LEADERBOARD.</em></div>
-  <div class="s12-vendor fragment" data-fragment-index="6">FULCRUM REPORTS ECHO BEAT TESTED FRONTIER MODELS ON ITS OWN STYLE EVALUATIONS; UNDER $5K TO TRAIN.</div>
-  <div class="source"><span>SOURCES</span> [17] Thinking Machines, “Introducing Inkling” · [18] “Tinker” · [19] Fulcrum, “Echo.”</div>
+  <div class="privacy-reveal fragment" data-fragment-index="9"><strong>FREE INFERENCE ≠ FREE DATA</strong><span>CHECK THE ENDPOINT’S TERMS.</span></div>
+  <div class="source"><span>SOURCES</span> [20] Quasar / Optimus reveal · [21] OpenRouter Stealth records · [22] Free Models · [23] Inkling free endpoint.</div>
 </div>
 </section>
-<section id="section-12" class="slide level2 openrouter">
+<section id="section-12" class="slide level2 model-landscape">
 <h2></h2>
 <div class="slide s13">
-  <div class="sys-label">SYS_13 / EXPERIMENTATION</div>
-  <div class="s13-kicker">OPENROUTER / EXPERIMENT</div>
-  <div class="s13-title">TRY IT<br>BEFORE YOU KNOW<br>ITS NAME.</div>
-  <div class="s13-system">ONE HARNESS.<br><span>MANY MODELS.</span></div>
-  <div class="stealth-map">
-    <div class="stealth-row fragment" data-fragment-index="0"><span>QUASAR α / OPTIMUS α</span><b>→</b><strong>GPT-4.1</strong></div>
-    <div class="stealth-row fragment" data-fragment-index="1"><span>POLARIS α</span><b>→</b><strong>EARLY GPT-5.1 SNAPSHOT</strong></div>
-    <div class="stealth-row fragment" data-fragment-index="2"><span>OX α</span><b>→</b><strong>GLM-5.3 FLASH</strong></div>
-    <div class="stealth-row fragment" data-fragment-index="3"><span>UNION α</span><b>→</b><strong>UNBIASED PARETO</strong></div>
-    <div class="stealth-row fragment" data-fragment-index="4"><span>HUNTER α</span><b>→</b><strong>XIAOMI MiMo-V2-PRO</strong></div>
-    <div class="stealth-row unknown fragment" data-fragment-index="5"><span>SPACE BUNNY α</span><b>→</b><strong>?</strong></div>
+  <div class="sys-label">SYS_13 / MODEL LANDSCAPE</div>
+  <div class="swarm-mark"></div>
+  <div class="swarm">
+    <div class="mname" style="left:96px;top:138px;font-size:48px;color:#F1F4F0">GPT-6 ASTRA</div>
+    <div class="mname" style="left:780px;top:134px;font-size:44px;color:rgba(241,244,240,.82)">GEMINI 4 ARGON</div>
+    <div class="mname" style="left:1200px;top:160px;font-size:34px;color:rgba(241,244,240,.7)">CLAUDE OPUS 5.5</div>
+    <div class="mname" style="left:600px;top:206px;font-size:30px;color:rgba(241,244,240,.62)">DEEPSEEK V4.1 FLASH</div>
+    <div class="mname" style="left:250px;top:232px;font-size:32px;color:rgba(241,244,240,.78);transform:rotate(-3deg)">GROK 4.7</div>
+    <div class="mname" style="left:1010px;top:226px;font-size:32px;color:rgba(54,221,245,.72)">KIMI K3</div>
+    <div class="mname" style="left:1320px;top:258px;font-size:28px;color:rgba(241,244,240,.6);transform:rotate(2deg)">GPT-6.1 SOL</div>
+    <div class="mname" style="left:1130px;top:330px;font-size:30px;color:rgba(241,244,240,.66);transform:rotate(2deg)">MINIMAX M3</div>
+    <div class="mname" style="left:1340px;top:424px;font-size:34px;color:rgba(241,244,240,.74)">GLM-5.3</div>
+    <div class="mname" style="left:1080px;top:492px;font-size:28px;color:rgba(241,244,240,.58);transform:rotate(-2deg)">MiMo-V2.5-PRO</div>
+    <div class="mname" style="left:100px;top:520px;font-size:30px;color:rgba(241,244,240,.62)">NEMOTRON 3 ULTRA</div>
+    <div class="mname" style="left:430px;top:520px;font-size:28px;color:rgba(241,244,240,.55)">CLAUDE SONNET 5.5</div>
   </div>
-  <div class="free-models fragment" data-fragment-index="6">
-    <div class="free-lead">TRY NOW FOR $0</div>
-    <div class="free-row">
-      <div class="free-item"><span>INKLING</span><b>$0</b></div>
-      <div class="free-item"><span>NEMOTRON</span><b>$0</b></div>
-      <div class="free-item"><span>SPACE BUNNY α</span><b>$0 · STEALTH</b></div>
-    </div>
+  <div class="s13-q1 fragment" data-fragment-index="1">BEST MODEL?</div>
+  <div class="s13-strike fragment" data-fragment-index="2"></div>
+  <div class="s13-scrim fragment" data-fragment-index="3"></div>
+  <div class="s13-q2 fragment" data-fragment-index="3">BEST FOR WHAT?</div>
+  <div class="s13-routing">
+    <div class="route-item r-paper fragment" data-fragment-index="4"><div class="route-task">HARD OPEN-ENDED WORK</div><div class="route-models">GPT-6.1 SOL<br>CLAUDE OPUS 5.5<br>GROK 4.7</div></div>
+    <div class="route-item r-acid fragment" data-fragment-index="5"><div class="route-task">FAST · HIGH-VOLUME AGENT WORK</div><div class="route-models">DEEPSEEK V4.1 FLASH<br>NEMOTRON 3.5 LIGHTNING</div></div>
+    <div class="route-item r-acid fragment" data-fragment-index="5"><div class="route-task">YOUR OWN SPECIALIST</div><div class="route-models">INKLING + TINKER</div></div>
+    <div class="route-item r-yellow fragment" data-fragment-index="6"><div class="route-task">BOUNDED DECISION</div><div class="route-models">JEV</div></div>
+    <div class="route-item r-yellow fragment" data-fragment-index="6"><div class="route-task">STYLE / WRITING</div><div class="route-models">ECHO</div></div>
   </div>
-  <div class="privacy-reveal fragment" data-fragment-index="7"><strong>FREE INFERENCE ≠ FREE DATA</strong><span>CHECK THE ENDPOINT’S TERMS.</span></div>
-  <div class="source"><span>SOURCES</span> [20] Quasar / Optimus reveal · [21] OpenRouter Stealth records · [22] Free Models · [23] Inkling free endpoint.</div>
+  <div class="source"><span>SOURCES</span> [24] Official model pages, accessed Oct. 2, 2026 (see references). Gemini 4 Argon: phased rollout — not general availability.</div>
 </div>
 </section>
 <section id="section-13" class="slide level2 final-framework">
@@ -380,24 +432,25 @@
   <div class="refs-title">REFERENCES</div>
   <div class="refs-cols">
     <div class="refs-col">
-      <div class="ref"><b>[1]</b><span>McGuinness, Grace, De Jonghe, Eaton &amp; Ribbink · 2026</span><i>“How we contain Claude across products.” Anthropic Engineering, May 25.</i></div>
-      <div class="ref"><b>[2]</b><span>Agrawal, Gans &amp; Goldfarb · 2018</span><i>Prediction Machines: The Simple Economics of Artificial Intelligence.</i></div>
-      <div class="ref"><b>[3]</b><span>Anthropic · 2024</span><i>“Building effective agents.” Anthropic Engineering, Dec. 19.</i></div>
-      <div class="ref"><b>[4]</b><span>Model Context Protocol · 2026</span><i>Specification 2026-07-28: “Architecture” and “Server / Tools.”</i></div>
-      <div class="ref"><b>[5]</b><span>Lemonade, Inc. · 2026</span><i>FY2025 Annual Report on Form 10-K. Filed Feb. 25; SEC accession 0001691421-26-000016.</i></div>
-      <div class="ref"><b>[6]</b><span>Vaccaro, Almaatouq &amp; Malone · 2024</span><i>“When combinations of humans and AI are useful.” Nature Human Behaviour 8, 2293–2303.</i></div>
-      <div class="ref"><b>[7]</b><span>Nous Research · 2026</span><i>Hermes Agent Documentation: “Bot Screen.” Accessed Sept. 30.</i></div>
+      <div class="ref"><b>[1]</b><div class="ref-body"><span>McGuinness, Grace, De Jonghe, Eaton &amp; Ribbink · 2026</span><i>“How we contain Claude across products.” Anthropic Engineering, May 25.</i></div></div>
+      <div class="ref"><b>[2]</b><div class="ref-body"><span>Agrawal, Gans &amp; Goldfarb · 2018</span><i>Prediction Machines: The Simple Economics of Artificial Intelligence.</i></div></div>
+      <div class="ref"><b>[3]</b><div class="ref-body"><span>Anthropic · 2024</span><i>“Building effective agents.” Anthropic Engineering, Dec. 19.</i></div></div>
+      <div class="ref"><b>[4]</b><div class="ref-body"><span>Model Context Protocol · 2026</span><i>Specification 2026-07-28: “Architecture” and “Server / Tools.”</i></div></div>
+      <div class="ref"><b>[5]</b><div class="ref-body"><span>Lemonade, Inc. · 2026</span><i>FY2025 Annual Report on Form 10-K. Filed Feb. 25; SEC accession 0001691421-26-000016.</i></div></div>
     </div>
     <div class="refs-col">
-      <div class="ref"><b>[8]</b><span>Paperclip · 2026</span><i>“Agents,” “Agent Adapters,” “Approvals API,” “Hermes Adapter,” and “Hermes Gateway Adapter.”</i></div>
-      <div class="ref"><b>[9]</b><span>Block · 2026</span><i>Buzz README, VISION.md, ARCHITECTURE.md, and workflow executor source. Current main.</i></div>
-      <div class="ref"><b>[10]</b><span>n8n · 2026</span><i>“AI Agent,” “Call n8n Workflow Tool,” “Human-in-the-loop for tools,” and “MCP Client Tool.”</i></div>
-      <div class="ref"><b>[11–16]</b><span>TypeSafe AI · 2026</span><i>“System One,” “Choice,” “Score,” “Noul,” “Confidence,” and Diogo Almeida, “Introducing System One Models &amp; Jev.”</i></div>
+      <div class="ref"><b>[6]</b><div class="ref-body"><span>Vaccaro, Almaatouq &amp; Malone · 2024</span><i>“When combinations of humans and AI are useful.” Nature Human Behaviour 8, 2293–2303.</i></div></div>
+      <div class="ref"><b>[7]</b><div class="ref-body"><span>Nous Research · 2026</span><i>Hermes Agent Documentation: “Bot Screen.” Accessed Sept. 30.</i></div></div>
+      <div class="ref"><b>[8]</b><div class="ref-body"><span>Paperclip · 2026</span><i>“Agents,” “Agent Adapters,” “Approvals API,” “Hermes Adapter,” and “Hermes Gateway Adapter.”</i></div></div>
+      <div class="ref"><b>[9]</b><div class="ref-body"><span>Block · 2026</span><i>Buzz README, VISION.md, ARCHITECTURE.md, and workflow executor source. Current main.</i></div></div>
+      <div class="ref"><b>[10]</b><div class="ref-body"><span>n8n · 2026</span><i>“AI Agent,” “Call n8n Workflow Tool,” “Human-in-the-loop for tools,” and “MCP Client Tool.”</i></div></div>
     </div>
     <div class="refs-col">
-      <div class="ref"><b>[17–18]</b><span>Thinking Machines Lab · 2026</span><i>“Introducing Inkling,” “Inkling,” “Tinker,” and Tinker documentation.</i></div>
-      <div class="ref"><b>[19]</b><span>Fulcrum Research · 2026</span><i>“Echo.” Official model and evaluation page.</i></div>
-      <div class="ref"><b>[20–23]</b><span>OpenRouter · 2025–2026</span><i>“Quasar Alpha and Optimus Alpha Reveal”; “Stealth API and Models”; “Polaris Alpha”; “Ox Alpha”; “Union Alpha”; “Hunter Alpha”; “Space Bunny Alpha”; “Free AI Models”; “Inkling (free).”</i></div>
+      <div class="ref"><b>[11–16]</b><div class="ref-body"><span>TypeSafe AI · 2026</span><i>“System One,” “Choice,” “Score,” “Noul,” “Confidence,” and Diogo Almeida, “Introducing System One Models &amp; Jev.”</i></div></div>
+      <div class="ref"><b>[17–18]</b><div class="ref-body"><span>Thinking Machines Lab · 2026</span><i>“Introducing Inkling,” “Inkling,” “Tinker,” and Tinker documentation.</i></div></div>
+      <div class="ref"><b>[19]</b><div class="ref-body"><span>Fulcrum Research · 2026</span><i>“Echo.” Official model and evaluation page.</i></div></div>
+      <div class="ref"><b>[20–23]</b><div class="ref-body"><span>OpenRouter · 2025–2026</span><i>“Quasar Alpha and Optimus Alpha Reveal”; “Stealth API and Models”; “Polaris Alpha”; “Ox Alpha”; “Union Alpha”; “Hunter Alpha”; “Space Bunny Alpha”; “Free AI Models”; “Inkling (free).”</i></div></div>
+      <div class="ref"><b>[24]</b><div class="ref-body"><span>Official model pages · 2026</span><i>OpenAI, Anthropic, Google DeepMind, xAI, DeepSeek, Moonshot, MiniMax, Z.ai, NVIDIA, Xiaomi, Alibaba Qwen. Accessed Oct. 2, 2026.</i></div></div>
     </div>
   </div>
   <div class="refs-note">Inline citations identify the source supporting each substantive slide. Vendor-reported evaluations remain attributed.</div>
