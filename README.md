@@ -8,8 +8,6 @@ Asking, connecting, and delegating answer different questions. A model can perfo
 
 **Repository:** <https://github.com/rtmandreyev/ask-connect-delegate>
 
-**Companion presentation:** Predict · Explain · Intervene — <https://rtmandreyev.github.io/predict-explain-intervene/>
-
 ![The title slide: ASK · CONNECT · DELEGATE — Architecture for AI work](assets/readme/title-slide.png)
 
 ---
