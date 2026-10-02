@@ -9,3 +9,6 @@ _site/
 
 # Reveal.js generated dependencies
 presentation_files/
+
+/.quarto/
+**/*.quarto_ipynb
