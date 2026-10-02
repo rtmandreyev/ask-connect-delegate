@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-bf06c18080f422d00fd6b07b9e43dfab.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-b50e1b065b813bda6c87e899b1be486c.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p><span class="working-title"> ASK<br> CONNECT<br> DELEGATE </span></p></h1>
+  <h1 class="title"><p><span class="working-title"> <span class="t-ask">ASK</span><br> <span class="t-connect">CONNECT</span><br> <span class="t-delegate">DELEGATE</span> </span></p></h1>
   <p class="subtitle">ARCHITECTURE FOR AI WORK</p>
 
 <div class="quarto-title-authors">
@@ -176,8 +176,7 @@
   <div class="dimension d-ask fragment"><div class="dimension-word">ASK</div><div class="dimension-question">What cognition do we need?</div></div>
   <div class="dimension d-connect fragment"><div class="dimension-word">CONNECT</div><div class="dimension-question">What can it reach?</div></div>
   <div class="dimension d-delegate fragment"><div class="dimension-word">DELEGATE</div><div class="dimension-question">Who chooses what happens next?</div></div>
-  <div class="s3-not-ladder fragment">DIMENSIONS — NOT STAGES</div>
-  <div class="s3-book fragment"><i>Prediction Machines</i> decomposes the work. Agents can increasingly move some decomposition inside the system.</div>
+  <div class="s3-book fragment">WHO DECOMPOSES THE WORK?</div>
   <div class="source"><span>CONNECTION</span> [2] Agrawal, Gans &amp; Goldfarb (2018); extension is our synthesis.</div>
 </div>
 </section>
@@ -187,18 +186,16 @@
   <div class="sys-label">SYS_04 / CONTROL FLOW</div>
   <div class="s4-title">WORKFLOW <span>≠</span> AGENT</div>
   <div class="workflow-side">
-    <div class="control-name">WORKFLOW</div>
-    <div class="control-flow">TRIGGER <b>→</b> DATA <b>→</b> AI <b>→</b> RULE <b>→</b> ACTION</div>
-    <div class="control-label">PREDEFINED CONTROL</div>
+    <div class="control-name fragment" data-fragment-index="0">WORKFLOW</div>
+    <div class="control-flow fragment" data-fragment-index="1">TRIGGER <b>→</b> DATA <b>→</b> <span class="hl-acid">AI</span> <b>→</b> RULE <b>→</b> ACTION</div>
+    <div class="control-label fragment" data-fragment-index="1">PREDEFINED CONTROL</div>
   </div>
-  <div class="agent-side fragment">
-    <div class="control-name">AGENT</div>
-    <div class="agent-goal">GOAL</div>
-    <div class="agent-loop"><span>OBSERVE</span><b>→</b><span>DECIDE</span><b>→</b><span class="active">ACT</span><b class="loopback">↺</b></div>
-    <div class="control-label">DYNAMIC CONTROL</div>
+  <div class="agent-side">
+    <div class="control-name fragment" data-fragment-index="2">AGENT</div>
+    <div class="control-flow fragment" data-fragment-index="3">GOAL <b>→</b> OBSERVE <b>→</b> DECIDE <b>→</b> <span class="hl-acid">ACT</span> <b class="loopback">↻</b></div>
+    <div class="control-label fragment" data-fragment-index="3">DYNAMIC CONTROL</div>
   </div>
-  <div class="s4-synthesis fragment"><div>A WORKFLOW CONTAINS AI.</div><div class="active">AN AGENT CONTAINS A WORKFLOW.</div></div>
-  <div class="s4-caution fragment">USEFUL TAXONOMY — NOT A UNIVERSAL DEFINITION</div>
+  <div class="s4-synthesis fragment" data-fragment-index="4"><div>A WORKFLOW CONTAINS <span class="hl-acid">AI.</span></div><div><span class="hl-acid">AN AGENT</span> CONTAINS A WORKFLOW.</div></div>
   <div class="source"><span>TECHNICAL BASIS</span> [3] Anthropic (2024), “Building effective agents.” Containment wording is our synthesis.</div>
 </div>
 </section>
@@ -208,12 +205,23 @@
   <div class="sys-label">SYS_05 / CONNECTIVITY</div>
   <div class="s5-title">CONNECT <span>≠</span> DELEGATE</div>
   <div class="mcp-map">
-    <div class="tool-node n-crm">CRM</div><div class="tool-node n-db">DATABASE</div><div class="tool-node n-email">EMAIL</div><div class="tool-node n-files">FILES</div><div class="tool-node n-tools">TOOLS</div><div class="ai-node">AI</div>
-    <div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div class="connector c4"></div><div class="connector c5"></div>
+    <svg class="mcp-lines" width="640" height="480" viewbox="0 0 640 480" aria-hidden="true">
+      <line x1="320" y1="218" x2="320" y2="68"></line>
+      <line x1="391.6" y1="242.7" x2="457.3" y2="221.4"></line>
+      <line x1="353.8" y1="312.5" x2="433.1" y2="421.6"></line>
+      <line x1="286.2" y1="312.5" x2="206.9" y2="421.6"></line>
+      <line x1="248.4" y1="242.7" x2="182.7" y2="221.4"></line>
+    </svg>
+    <div class="tool-node n-crm">CRM</div>
+    <div class="tool-node n-database">DATABASE</div>
+    <div class="tool-node n-email">EMAIL</div>
+    <div class="tool-node n-files">FILES</div>
+    <div class="tool-node n-tools">TOOLS</div>
+    <div class="ai-node">AI</div>
   </div>
-  <div class="s5-statement fragment"><span>ACCESS</span><b>≠</b><span>AUTONOMY</span></div>
+  <div class="s5-statement fragment"><span class="acc-access">ACCESS</span><b>≠</b><span class="acc-auto">AUTONOMY</span></div>
   <div class="s5-mcp fragment">MCP standardizes connection.</div>
-  <div class="s5-boundary fragment">It does not decide<br><strong>the goal, the plan,<br>or the business action.</strong></div>
+  <div class="s5-boundary fragment">IT DOESN’T CHOOSE<br><strong>THE GOAL, THE PLAN,<br>OR THE ACTION.</strong></div>
   <div class="source"><span>SOURCE</span> [4] Model Context Protocol Specification 2026-07-28, Architecture and Tools.</div>
 </div>
 </section>
@@ -235,7 +243,7 @@
 <div class="slide s7">
   <div class="sys-label">SYS_07 / COLLABORATION</div>
   <div class="s7-scale"><strong>106</strong><span>EXPERIMENTS</span><small>370 EFFECT SIZES · 74 PAPERS</small></div>
-  <div class="s7-result fragment"><span>HUMAN + AI</span><br>DID NOT OUTPERFORM<br>THE BETTER SOLO PERFORMER<br><em>ON AVERAGE.</em></div>
+  <div class="s7-result fragment"><span class="c-human">HUMAN</span> + <span class="c-ai">AI</span><br>DID NOT OUTPERFORM<br>THE BETTER SOLO PERFORMER<br><em>ON AVERAGE.</em></div>
   <div class="s7-effect fragment">Hedges’ g = −0.23</div>
   <div class="s7-nuance fragment">BUT IT DID OUTPERFORM<br><strong>HUMANS ALONE</strong><br>ON AVERAGE.</div>
   <div class="source"><span>SOURCE</span> [6] Vaccaro, Almaatouq &amp; Malone, <i>Nature Human Behaviour</i> 8 (2024).</div>
@@ -254,7 +262,7 @@
     <div class="flow-step agent-step fragment" data-fragment-index="3">AGENT<br>RESUMES</div>
   </div>
   <div class="s8-example fragment">You can let AI work — and take over only when a step needs you.<br><span>Hermes is one current example.</span></div>
-  <div class="s8-caution fragment">TOOL-LEVEL FENCE · NOT AN OS-LEVEL SECURITY BOUNDARY</div>
+  <div class="s8-note fragment">Hermes blocks the agent’s browser and computer tools while you have control.</div>
   <div class="source"><span>SOURCE</span> [7] Nous Research, Hermes Agent documentation: “Bot Screen.”</div>
 </div>
 </section>
@@ -277,18 +285,18 @@
   <div class="sys-label">SYS_10 / COMPOSITION</div>
   <div class="s10-title">The architecture<br>is a stack.</div>
   <div class="arch-stack">
-    <div class="stack-layer governance fragment" data-fragment-index="0"><div class="stack-name">PAPERCLIP</div><div class="stack-role">CONTROL / ORCHESTRATION / GOVERNANCE</div></div>
+    <div class="stack-layer governance fragment" data-fragment-index="0"><div class="stack-name">PAPERCLIP</div><div class="stack-role">control · governance</div></div>
     <div class="stack-arrow fragment" data-fragment-index="1">↓</div>
-    <div class="stack-layer workspace fragment" data-fragment-index="1"><div class="stack-name">BUZZ</div><div class="stack-role">SHARED WORKSPACE</div></div>
+    <div class="stack-layer workspace fragment" data-fragment-index="1"><div class="stack-name">BUZZ</div><div class="stack-role">shared workspace</div></div>
     <div class="stack-arrow fragment" data-fragment-index="2">↓</div>
-    <div class="stack-layer execution fragment" data-fragment-index="2"><div class="stack-name">HERMES</div><div class="stack-role">WORKER / RUNTIME</div></div>
+    <div class="stack-layer execution fragment" data-fragment-index="2"><div class="stack-name">HERMES</div><div class="stack-role">worker · runtime</div></div>
     <div class="stack-arrow fragment" data-fragment-index="3">↓</div>
-    <div class="stack-layer connection fragment" data-fragment-index="3"><div class="stack-name">n8n / MCP / APIs</div><div class="stack-role">WORKFLOW + CONNECTION</div></div>
+    <div class="stack-layer connection fragment" data-fragment-index="3"><div class="stack-name">n8n · MCP · APIs</div><div class="stack-role">workflow · connection</div></div>
     <div class="stack-arrow fragment" data-fragment-index="4">↓</div>
     <div class="stack-layer systems fragment" data-fragment-index="4"><div class="stack-name">BUSINESS SYSTEMS</div></div>
   </div>
-  <div class="jev-gate fragment" data-fragment-index="5"><div class="gate-name">JEV</div><div class="gate-role">BOUNDED<br>DECISION</div></div>
-  <div class="s10-caveat fragment" data-fragment-index="6">ILLUSTRATIVE COMPOSITION<br>LAYERS CAN OVERLAP</div>
+  <div class="jev-gate fragment" data-fragment-index="5"><div class="gate-name">JEV</div><div class="gate-role">BOUNDED DECISION</div></div>
+  <div class="s10-caveat fragment" data-fragment-index="6">ONE POSSIBLE STACK.</div>
   <div class="source"><span>SOURCES</span> [7] Hermes · [8] Paperclip · [9] Buzz · [10] n8n / MCP documentation.</div>
 </div>
 </section>
@@ -302,8 +310,7 @@
     <div class="jev-output fragment"><div><span>PILOT</span><strong>.61</strong></div><div><span>DEPLOY</span><strong>.22</strong></div><div><span>ABSTAIN</span><strong>.17</strong></div><small>ILLUSTRATIVE JEV CHOICE OUTPUT</small></div>
   </div>
   <div class="s11-typed fragment">TYPED PROBABILITIES<br><strong>NOT PROSE</strong></div>
-  <div class="confidence-note fragment">CONFIDENCE<br><b>≠</b><br>THE RETURNED PROBABILITY</div>
-  <div class="s11-caution fragment">Typed outputs constrain interface shape — not correctness, domain calibration, or adversarial robustness.</div>
+  <div class="confidence-note fragment">Confidence measures how concentrated the Choice / Score distribution is.</div>
   <div class="source"><span>SOURCES</span> [11] System One · [12][13][14] Choice, Score, Noul · [15][16] Confidence and Jev.</div>
 </div>
 </section>
@@ -312,12 +319,15 @@
 <div class="slide s12">
   <div class="sys-label">SYS_12 / MODEL TOOLBOX</div>
   <div class="s12-prompt">BEST MODEL?</div>
-  <div class="s12-answer fragment">BEST FOR WHAT?</div>
-  <div class="toolbox-item toolbox-jev fragment"><div class="toolbox-name">JEV</div><div class="toolbox-role">DECISIONS</div></div>
-  <div class="toolbox-item toolbox-inkling fragment"><div class="toolbox-name">INKLING + TINKER</div><div class="toolbox-role">GENERALIST → YOUR SPECIALIST</div></div>
-  <div class="toolbox-item toolbox-echo fragment"><div class="toolbox-name">ECHO</div><div class="toolbox-role">WRITING / STYLE</div></div>
-  <div class="s12-thesis fragment">THE MODEL ECOSYSTEM<br>IS A <strong>TOOLBOX.</strong><br><em>NOT A LEADERBOARD.</em></div>
-  <div class="s12-vendor fragment">FULCRUM REPORTS ECHO BEAT TESTED FRONTIER MODELS ON ITS OWN STYLE EVALUATIONS; UNDER $5K TO TRAIN.</div>
+  <div class="s12-answer fragment" data-fragment-index="0">BEST FOR WHAT?</div>
+  <div class="toolbox-grid">
+    <div class="toolbox-item t-frontier fragment" data-fragment-index="1"><div class="toolbox-name">FRONTIER GENERALIST</div><div class="toolbox-role">BROAD REASONING<br>HARD OPEN-ENDED WORK</div><div class="toolbox-examples">GPT · CLAUDE · GEMINI · DEEPSEEK</div></div>
+    <div class="toolbox-item t-jev fragment" data-fragment-index="2"><div class="toolbox-name">JEV</div><div class="toolbox-role">DECISIONS</div></div>
+    <div class="toolbox-item t-inkling fragment" data-fragment-index="3"><div class="toolbox-name">INKLING + TINKER</div><div class="toolbox-role">GENERALIST → YOUR SPECIALIST</div></div>
+    <div class="toolbox-item t-echo fragment" data-fragment-index="4"><div class="toolbox-name">ECHO</div><div class="toolbox-role">WRITING / STYLE</div></div>
+  </div>
+  <div class="s12-thesis fragment" data-fragment-index="5">THE MODEL ECOSYSTEM<br>IS A <strong>TOOLBOX.</strong><br><em>NOT A LEADERBOARD.</em></div>
+  <div class="s12-vendor fragment" data-fragment-index="6">FULCRUM REPORTS ECHO BEAT TESTED FRONTIER MODELS ON ITS OWN STYLE EVALUATIONS; UNDER $5K TO TRAIN.</div>
   <div class="source"><span>SOURCES</span> [17] Thinking Machines, “Introducing Inkling” · [18] “Tinker” · [19] Fulcrum, “Echo.”</div>
 </div>
 </section>
@@ -325,15 +335,26 @@
 <h2></h2>
 <div class="slide s13">
   <div class="sys-label">SYS_13 / EXPERIMENTATION</div>
+  <div class="s13-kicker">OPENROUTER / EXPERIMENT</div>
   <div class="s13-title">TRY IT<br>BEFORE YOU KNOW<br>ITS NAME.</div>
+  <div class="s13-system">ONE HARNESS.<br><span>MANY MODELS.</span></div>
   <div class="stealth-map">
-    <div class="stealth-row fragment"><span>QUASAR α / OPTIMUS α</span><b>→</b><strong>GPT-4.1</strong></div>
-    <div class="stealth-row fragment"><span>POLARIS α</span><b>→</b><strong>EARLY GPT-5.1 SNAPSHOT</strong></div>
-    <div class="stealth-row unknown fragment"><span>SPACE BUNNY α</span><b>→</b><strong>?</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="0"><span>QUASAR α / OPTIMUS α</span><b>→</b><strong>GPT-4.1</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="1"><span>POLARIS α</span><b>→</b><strong>EARLY GPT-5.1 SNAPSHOT</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="2"><span>OX α</span><b>→</b><strong>GLM-5.3 FLASH</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="3"><span>UNION α</span><b>→</b><strong>UNBIASED PARETO</strong></div>
+    <div class="stealth-row fragment" data-fragment-index="4"><span>HUNTER α</span><b>→</b><strong>XIAOMI MiMo-V2-PRO</strong></div>
+    <div class="stealth-row unknown fragment" data-fragment-index="5"><span>SPACE BUNNY α</span><b>→</b><strong>?</strong></div>
   </div>
-  <div class="s13-system fragment"><span>ONE HARNESS.</span><br>MANY MODELS.<br><small>MODEL ≠ HARNESS ≠ WORKFLOW</small></div>
-  <div class="free-models fragment"><div>INKLING <b>$0</b></div><div>NEMOTRON <b>$0</b></div><div>SPACE BUNNY α <b>$0 · STEALTH</b></div></div>
-  <div class="privacy-reveal fragment"><strong>FREE INFERENCE ≠ FREE DATA</strong><span>EXPERIMENT FREELY. NOT WITH SECRETS.</span></div>
+  <div class="free-models fragment" data-fragment-index="6">
+    <div class="free-lead">TRY NOW FOR $0</div>
+    <div class="free-row">
+      <div class="free-item"><span>INKLING</span><b>$0</b></div>
+      <div class="free-item"><span>NEMOTRON</span><b>$0</b></div>
+      <div class="free-item"><span>SPACE BUNNY α</span><b>$0 · STEALTH</b></div>
+    </div>
+  </div>
+  <div class="privacy-reveal fragment" data-fragment-index="7"><strong>FREE INFERENCE ≠ FREE DATA</strong><span>CHECK THE ENDPOINT’S TERMS.</span></div>
   <div class="source"><span>SOURCES</span> [20] Quasar / Optimus reveal · [21] OpenRouter Stealth records · [22] Free Models · [23] Inkling free endpoint.</div>
 </div>
 </section>
@@ -354,33 +375,30 @@
 </section>
 <section id="section-14" class="slide level2 references">
 <h2></h2>
-<div class="slide refs r1">
-  <div class="sys-label">SYS_REF / 01</div>
-  <div class="refs-title">REFERENCES <span>/ 01</span></div>
-  <div class="refs-list">
-    <div class="ref"><b>[1]</b><span>McGuinness, Grace, De Jonghe, Eaton &amp; Ribbink · 2026</span><i>“How we contain Claude across products.” Anthropic Engineering, May 25.</i></div>
-    <div class="ref"><b>[2]</b><span>Agrawal, Gans &amp; Goldfarb · 2018</span><i>Prediction Machines: The Simple Economics of Artificial Intelligence.</i></div>
-    <div class="ref"><b>[3]</b><span>Anthropic · 2024</span><i>“Building effective agents.” Anthropic Engineering, Dec. 19.</i></div>
-    <div class="ref"><b>[4]</b><span>Model Context Protocol · 2026</span><i>Specification 2026-07-28: “Architecture” and “Server / Tools.”</i></div>
-    <div class="ref"><b>[5]</b><span>Lemonade, Inc. · 2026</span><i>FY2025 Annual Report on Form 10-K. Filed Feb. 25; SEC accession 0001691421-26-000016.</i></div>
-    <div class="ref"><b>[6]</b><span>Vaccaro, Almaatouq &amp; Malone · 2024</span><i>“When combinations of humans and AI are useful.” Nature Human Behaviour 8, 2293–2303.</i></div>
-    <div class="ref"><b>[7]</b><span>Nous Research · 2026</span><i>Hermes Agent Documentation: “Bot Screen.” Accessed Sept. 30.</i></div>
-  </div>
-</div>
-</section>
-<section id="section-15" class="slide level2 references">
-<h2></h2>
-<div class="slide refs r2">
-  <div class="sys-label">SYS_REF / 02</div>
-  <div class="refs-title">REFERENCES <span>/ 02</span></div>
-  <div class="refs-list compact">
-    <div class="ref"><b>[8]</b><span>Paperclip · 2026</span><i>“Agents,” “Agent Adapters,” “Approvals API,” “Hermes Adapter,” and “Hermes Gateway Adapter.”</i></div>
-    <div class="ref"><b>[9]</b><span>Block · 2026</span><i>Buzz README, VISION.md, ARCHITECTURE.md, and workflow executor source. Current main.</i></div>
-    <div class="ref"><b>[10]</b><span>n8n · 2026</span><i>“AI Agent,” “Call n8n Workflow Tool,” “Human-in-the-loop for tools,” and “MCP Client Tool.”</i></div>
-    <div class="ref"><b>[11–16]</b><span>TypeSafe AI · 2026</span><i>“System One,” “Choice,” “Score,” “Noul,” “Confidence,” and Diogo Almeida, “Introducing System One Models &amp; Jev.”</i></div>
-    <div class="ref"><b>[17–18]</b><span>Thinking Machines Lab · 2026</span><i>“Introducing Inkling,” “Inkling,” “Tinker,” and Tinker documentation.</i></div>
-    <div class="ref"><b>[19]</b><span>Fulcrum Research · 2026</span><i>“Echo.” Official model and evaluation page.</i></div>
-    <div class="ref"><b>[20–23]</b><span>OpenRouter · 2025–2026</span><i>“Quasar Alpha and Optimus Alpha Reveal”; “Stealth API and Models”; “Polaris Alpha”; “Space Bunny Alpha”; “Ox Alpha”; “Union Alpha”; “Free AI Models”; “Inkling (free).”</i></div>
+<div class="slide refs">
+  <div class="sys-label">SYS_REF / SOURCES</div>
+  <div class="refs-title">REFERENCES</div>
+  <div class="refs-cols">
+    <div class="refs-col">
+      <div class="ref"><b>[1]</b><span>McGuinness, Grace, De Jonghe, Eaton &amp; Ribbink · 2026</span><i>“How we contain Claude across products.” Anthropic Engineering, May 25.</i></div>
+      <div class="ref"><b>[2]</b><span>Agrawal, Gans &amp; Goldfarb · 2018</span><i>Prediction Machines: The Simple Economics of Artificial Intelligence.</i></div>
+      <div class="ref"><b>[3]</b><span>Anthropic · 2024</span><i>“Building effective agents.” Anthropic Engineering, Dec. 19.</i></div>
+      <div class="ref"><b>[4]</b><span>Model Context Protocol · 2026</span><i>Specification 2026-07-28: “Architecture” and “Server / Tools.”</i></div>
+      <div class="ref"><b>[5]</b><span>Lemonade, Inc. · 2026</span><i>FY2025 Annual Report on Form 10-K. Filed Feb. 25; SEC accession 0001691421-26-000016.</i></div>
+      <div class="ref"><b>[6]</b><span>Vaccaro, Almaatouq &amp; Malone · 2024</span><i>“When combinations of humans and AI are useful.” Nature Human Behaviour 8, 2293–2303.</i></div>
+      <div class="ref"><b>[7]</b><span>Nous Research · 2026</span><i>Hermes Agent Documentation: “Bot Screen.” Accessed Sept. 30.</i></div>
+    </div>
+    <div class="refs-col">
+      <div class="ref"><b>[8]</b><span>Paperclip · 2026</span><i>“Agents,” “Agent Adapters,” “Approvals API,” “Hermes Adapter,” and “Hermes Gateway Adapter.”</i></div>
+      <div class="ref"><b>[9]</b><span>Block · 2026</span><i>Buzz README, VISION.md, ARCHITECTURE.md, and workflow executor source. Current main.</i></div>
+      <div class="ref"><b>[10]</b><span>n8n · 2026</span><i>“AI Agent,” “Call n8n Workflow Tool,” “Human-in-the-loop for tools,” and “MCP Client Tool.”</i></div>
+      <div class="ref"><b>[11–16]</b><span>TypeSafe AI · 2026</span><i>“System One,” “Choice,” “Score,” “Noul,” “Confidence,” and Diogo Almeida, “Introducing System One Models &amp; Jev.”</i></div>
+    </div>
+    <div class="refs-col">
+      <div class="ref"><b>[17–18]</b><span>Thinking Machines Lab · 2026</span><i>“Introducing Inkling,” “Inkling,” “Tinker,” and Tinker documentation.</i></div>
+      <div class="ref"><b>[19]</b><span>Fulcrum Research · 2026</span><i>“Echo.” Official model and evaluation page.</i></div>
+      <div class="ref"><b>[20–23]</b><span>OpenRouter · 2025–2026</span><i>“Quasar Alpha and Optimus Alpha Reveal”; “Stealth API and Models”; “Polaris Alpha”; “Ox Alpha”; “Union Alpha”; “Hunter Alpha”; “Space Bunny Alpha”; “Free AI Models”; “Inkling (free).”</i></div>
+    </div>
   </div>
   <div class="refs-note">Inline citations identify the source supporting each substantive slide. Vendor-reported evaluations remain attributed.</div>
 </div>
